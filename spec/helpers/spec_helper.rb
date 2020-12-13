@@ -22,8 +22,8 @@ require_relative '../../app/domain/restaurant/repositories/locations'
 
 # CORRECT = YAML.safe_load(File.read('spec/fixtures/thsr_results.yml'))
 
-# CASSETTES_FOLDER = 'spec/fixtures/cassettes'
-# CASSETTE_FILE = 'thsr_api'
+CASSETTES_FOLDER = 'spec/fixtures/cassettes'
+CASSETTE_FILE = 'thsr_api'
 
 # Helper methods
 def homepage
