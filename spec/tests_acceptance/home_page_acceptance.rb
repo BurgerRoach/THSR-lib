@@ -5,6 +5,8 @@ require_relative 'pages/home_page'
 
 require 'headless'
 require 'watir'
+require 'chromedriver-helper'
+require 'selenium-webdriver'
 
 describe 'Acceptance Tests' do
   include PageObject::PageFactory
@@ -14,7 +16,7 @@ describe 'Acceptance Tests' do
   before do
     DatabaseHelper.wipe_database
     # @headless = Headless.new
-    @browser = Watir::Browser.new
+    @browser = Watir::Browser.new :chrome
   end
 
   after do

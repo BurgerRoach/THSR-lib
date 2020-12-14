@@ -3,8 +3,13 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    archive-zip (0.12.0)
+      io-like (~> 0.3.0)
     ast (2.4.1)
     childprocess (3.0.0)
+    chromedriver-helper (2.1.1)
+      archive-zip (~> 0.10)
+      nokogiri (~> 1.8)
     concurrent-ruby (1.1.7)
     crack (0.4.4)
     data_magic (1.2)
@@ -105,14 +110,18 @@ GEM
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
+    io-like (0.3.1)
     json (2.3.1)
     kwalify (0.7.2)
     listen (3.3.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    mini_portile2 (2.4.0)
     minitest (5.14.2)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
+    nokogiri (1.10.10)
+      mini_portile2 (~> 2.4.0)
     page-object (2.2.6)
       page_navigation (>= 0.10)
       selenium-webdriver (~> 3.0)
@@ -190,6 +199,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chromedriver-helper
   database_cleaner (~> 1.8)
   debase (~> 0.2)
   dry-monads
