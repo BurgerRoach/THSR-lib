@@ -39,7 +39,7 @@ describe 'Acceptance Tests' do
       # WHEN: user in the home page
       visit HomePage do |page|
         # THEN: they should see background image
-        _(page.check_image.exist?).must_equal true
+        _(page.background_image_element.exist?).must_equal true
       end
     end
 
@@ -48,8 +48,8 @@ describe 'Acceptance Tests' do
       # WHEN: user in the home page
       visit HomePage do |page|
         # THEN: they should see important buttons
-        _(page.start_button_element.present?).must_equal true
-        _(page.search_button_element.present?).must_equal true
+        _(page.start_button_element.exist?).must_equal true
+        _(page.search_button_element.exist?).must_equal true
       end
     end
 
@@ -58,7 +58,7 @@ describe 'Acceptance Tests' do
       # WHEN: user in the home page
       visit HomePage do |page|
         # THEN: they should see active item
-        _(page.check_active_item.exist?).must_equal true
+        _(page.first_active_item_element.exist?).must_equal true
       end
     end
   end
